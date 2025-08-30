@@ -8,7 +8,6 @@ import FloatingCTA from '@/components/ui/FloatingCTA';
 import InlineCTA from '@/components/ui/InlineCtA';
 import { ConsentProvider } from '@/components/legal/ConsentProvider';
 import ConsentBanner from '@/components/legal/ConsentBanner';
-import ConsentModal from '@/components/legal/ConsentModal';
 
 export default function Home() {
   return (

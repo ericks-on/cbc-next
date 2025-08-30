@@ -41,9 +41,10 @@ export default function TermsAndConditions() {
             <h2 className="text-2xl font-bold text-gray-900 mb-6">1. Agreement to Terms</h2>
             <div className="space-y-4 text-gray-700">
               <p>
-                These Terms and Conditions ("Terms") constitute a legally binding agreement between CBCTrack Solutions 
-                ("Company," "we," "our," or "us") and the educational institution ("School," "you," or "your") 
-                using our CBCTrack school management platform ("Service").
+                These Terms and Conditions (&quot;Terms&quot;) constitute a legally binding agreement between CBCTrack Solutions 
+                (&quot;Company,&quot; &quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) and the educational institution
+                (&quot;School,&quot; &quot;you,&quot; or &quot;your&quot;)
+                using our CBCTrack school management platform (&quot;Service&quot;).
               </p>
               <p>
                 By accessing or using our Service, you acknowledge that you have read, understood, and agree to be 
@@ -65,7 +66,7 @@ export default function TermsAndConditions() {
             <h2 className="text-2xl font-bold text-gray-900 mb-6">2. Description of Service</h2>
             <div className="space-y-4 text-gray-700">
               <p>
-                CBCTrack is a comprehensive school management platform specifically designed for Kenya's 
+                CBCTrack is a comprehensive school management platform specifically designed for Kenya&apos;s 
                 Competency-Based Curriculum (CBC) implementation. Our Service includes:
               </p>
               
@@ -101,7 +102,7 @@ export default function TermsAndConditions() {
                 <li>Schools must provide accurate and complete information during registration</li>
                 <li>Each school is responsible for maintaining the security of their account credentials</li>
                 <li>Schools must promptly update account information when changes occur</li>
-                <li>Multiple user accounts may be created under the school's primary account</li>
+                <li>Multiple user accounts may be created under the school&apos;s primary account</li>
               </ul>
 
               <h3 className="text-xl font-semibold text-gray-900 mt-6">3.2 User Roles and Access</h3>
@@ -109,7 +110,7 @@ export default function TermsAndConditions() {
                 <li><strong>School Administrators:</strong> Full system access and user management rights</li>
                 <li><strong>Teachers:</strong> Access to assigned classes and student information</li>
                 <li><strong>Staff:</strong> Limited access based on assigned roles</li>
-                <li><strong>Parents/Guardians:</strong> Access only to their child's information</li>
+                <li><strong>Parents/Guardians:</strong> Access only to their child&apos;s information</li>
               </ul>
 
               <h3 className="text-xl font-semibold text-gray-900 mt-6">3.3 User Responsibilities</h3>
@@ -140,7 +141,7 @@ export default function TermsAndConditions() {
               <h3 className="text-xl font-semibold text-gray-900 mt-6">4.2 Data Processing</h3>
               <ul className="list-disc list-inside space-y-2 ml-4">
                 <li>We process data solely for providing the contracted services</li>
-                <li>Data processing complies with Kenya's Data Protection Act 2019 and GDPR requirements</li>
+                <li>Data processing complies with Kenya&apos;s Data Protection Act 2019 and GDPR requirements</li>
                 <li>We implement appropriate technical and organizational security measures</li>
                 <li>Data processing agreements are established with all third-party service providers</li>
               </ul>
@@ -152,7 +153,7 @@ export default function TermsAndConditions() {
                   <li>Schools must obtain explicit consent from parents before enabling WhatsApp notifications</li>
                   <li>Only pre-approved message templates are used for automated communications</li>
                   <li>Parents can opt-out of WhatsApp communications at any time</li>
-                  <li>WhatsApp data processing complies with Meta's Business Terms and our Privacy Policy</li>
+                  <li>WhatsApp data processing complies with Meta&apos;s Business Terms and our Privacy Policy</li>
                 </ul>
               </div>
             </div>
@@ -258,7 +259,7 @@ export default function TermsAndConditions() {
                 non-exclusive, non-transferable license to use the Service.
               </p>
 
-              <h3 className="text-xl font-semibold text-gray-900 mt-6">8.2 School's Rights</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mt-6">8.2 School&apos;s Rights</h3>
               <p>
                 Schools retain full ownership of all content, data, and information uploaded to or 
                 created within the CBCTrack platform. We claim no ownership rights to your data.
@@ -325,11 +326,11 @@ export default function TermsAndConditions() {
               <div className="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded">
                 <p className="font-semibold text-yellow-900">Important Limitations:</p>
                 <ul className="list-disc list-inside space-y-1 ml-4 text-yellow-800">
-                  <li>The Service is provided "as is" without additional warranties</li>
+                  <li>The Service is provided &quot;as is&quot; without additional warranties</li>
                   <li>We do not guarantee uninterrupted or error-free operation</li>
                   <li>Schools are responsible for data backup and recovery planning</li>
                   <li>We are not responsible for issues caused by third-party services (including WhatsApp)</li>
-                  <li>Internet connectivity and technical infrastructure are the school's responsibility</li>
+                  <li>Internet connectivity and technical infrastructure are the school&apos;s responsibility</li>
                 </ul>
               </div>
             </div>

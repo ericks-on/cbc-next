@@ -41,8 +41,8 @@ export default function PrivacyPolicy() {
             <h2 className="text-2xl font-bold text-gray-900 mb-6">1. Introduction</h2>
             <div className="space-y-4 text-gray-700">
               <p>
-                CBCTrack Solutions ("we," "our," or "us") operates the CBCTrack school management platform 
-                ("Service") designed specifically for Kenya's Competency-Based Curriculum (CBC) implementation. 
+                CBCTrack Solutions (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) operates the CBCTrack school management platform 
+                (&quot;Service&quot;) designed specifically for Kenya&apos;s Competency-Based Curriculum (CBC) implementation. 
                 This Privacy Policy explains how we collect, use, disclose, and safeguard your information when 
                 you use our Service.
               </p>
@@ -54,7 +54,7 @@ export default function PrivacyPolicy() {
               <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
                 <p className="font-semibold text-blue-900">Important for Parents and Guardians:</p>
                 <p className="text-blue-800">
-                  Your child's educational data is protected under strict privacy standards. We only process 
+                  Your child&apos;s educational data is protected under strict privacy standards. We only process 
                   student information for legitimate educational purposes with appropriate consent.
                 </p>
               </div>
@@ -203,10 +203,10 @@ export default function PrivacyPolicy() {
             <div className="space-y-4 text-gray-700">
               <h3 className="text-xl font-semibold text-gray-900">6.1 Parent/Guardian Rights</h3>
               <ul className="list-disc list-inside space-y-2 ml-4">
-                <li><strong>Access:</strong> Request access to your child's information stored in our system</li>
+                <li><strong>Access:</strong> Request access to your child&apos;s information stored in our system</li>
                 <li><strong>Correction:</strong> Request correction of inaccurate or incomplete information</li>
                 <li><strong>Deletion:</strong> Request deletion of information (subject to educational record requirements)</li>
-                <li><strong>Portability:</strong> Request a copy of your child's data in a portable format</li>
+                <li><strong>Portability:</strong> Request a copy of your child&apos;s data in a portable format</li>
                 <li><strong>Communication Preferences:</strong> Opt-in or opt-out of WhatsApp communications</li>
               </ul>
 
@@ -282,7 +282,7 @@ export default function PrivacyPolicy() {
 
           {/* Children's Privacy */}
           <section className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">9. Children's Privacy Protection</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">9. Children&apos;s Privacy Protection</h2>
             <div className="space-y-4 text-gray-700">
               <p>
                 We take special care to protect the privacy of children under 18. Our service is designed 

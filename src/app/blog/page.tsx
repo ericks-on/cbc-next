@@ -86,7 +86,7 @@ export default async function BlogPage() {
           
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
             Stay ahead with practical guides, CBC implementation insights, and expert knowledge on 
-            school management and educational technology for Kenya's primary schools.
+            school management and educational technology for Kenya&apos;s primary schools.
           </p>
 
           {blogStats && (

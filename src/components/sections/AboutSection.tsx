@@ -22,7 +22,7 @@ export default function AboutSection() {
             About <span className="text-green-primary">CBCTrack</span>
           </h2>
           <p className="text-xl text-gray-600 mt-4 max-w-3xl mx-auto">
-            Kenya's Premier School Management System for CBC Implementation
+            Kenya&apos;s Premier School Management System for CBC Implementation
           </p>
         </motion.div>
 
@@ -72,7 +72,7 @@ export default function AboutSection() {
             <div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
               <p className="text-gray-600 leading-relaxed">
-                We're committed to transforming primary education in Kenya through innovative digital solutions that make CBC implementation seamless, efficient, and effective for every school regardless of its resources or location.
+                We&apos;re committed to transforming primary education in Kenya through innovative digital solutions that make CBC implementation seamless, efficient, and effective for every school regardless of its resources or location.
               </p>
             </div>
 
@@ -150,7 +150,7 @@ export default function AboutSection() {
             Join Leading Kenyan Primary Schools in CBC Excellence
           </h3>
           <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-            Discover how CBCTrack can transform your school's CBC implementation and administration.
+            Discover how CBCTrack can transform your school&apos;s CBC implementation and administration.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="primary">

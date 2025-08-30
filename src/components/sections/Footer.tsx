@@ -29,7 +29,7 @@ export default function Footer() {
               />
             </Link>
             <p className="text-gray-300 text-sm leading-relaxed">
-              Kenya's premier school management system designed specifically for CBC implementation. 
+              Kenya&apos;s premier school management system designed specifically for CBC implementation. 
               Empowering schools with digital solutions for modern education.
             </p>
           </motion.div>

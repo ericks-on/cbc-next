@@ -37,7 +37,7 @@ export default function FeaturesSection() {
             Powerful Features for Modern Education
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            CBCTrack provides comprehensive tools designed specifically for Kenya's Competency-Based Curriculum
+            CBCTrack provides comprehensive tools designed specifically for Kenya&apos;s Competency-Based Curriculum
           </p>
         </motion.div>
 
@@ -179,7 +179,7 @@ function FeatureSpread({
 
               <div className="mt-8 pt-6 border-t border-gray-200">
                 <p className="text-gray-600 text-center mb-4">
-                  All features are fully customizable to meet your school's specific needs and workflows.
+                  All features are fully customizable to meet your school&apos;s specific needs and workflows.
                 </p>
                 <div className="text-center">
                   <Button variant="primary">

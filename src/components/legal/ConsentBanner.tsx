@@ -136,7 +136,7 @@ export default function ConsentBanner({
                     <p className="text-gray-700 mb-3">
                       CBCTrack is committed to protecting your privacy and the privacy of student data. 
                       We process information to provide our school management services, including WhatsApp 
-                      communications for parents, in compliance with Kenya's Data Protection Act and GDPR.
+                      communications for parents, in compliance with Kenya&apos;s Data Protection Act and GDPR.
                     </p>
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-600">
@@ -328,7 +328,7 @@ export default function ConsentBanner({
                       📱 WhatsApp Business API Compliance
                     </h6>
                     <p className="text-sm text-green-800">
-                      Our WhatsApp integration complies with Meta's Business Terms and GDPR requirements. 
+                      Our WhatsApp integration complies with Meta&apos;s Business Terms and GDPR requirements. 
                       Messages are processed through certified Business Solution Providers with appropriate 
                       Data Processing Agreements. You can opt-out anytime by contacting your school or us directly.
                     </p>

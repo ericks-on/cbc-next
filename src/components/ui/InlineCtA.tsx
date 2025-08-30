@@ -2,8 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Calendar, Phone, MessageCircle } from 'lucide-react';
-import { Button } from './Button';
+import { Calendar, Phone, MessageCircle } from 'lucide-react';
 
 interface InlineCTAProps {
   variant?: 'default' | 'features' | 'gallery' | 'compact';

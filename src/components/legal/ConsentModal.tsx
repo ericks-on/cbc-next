@@ -140,7 +140,7 @@ export default function ConsentModal({
                           <h4 className="font-semibold text-green-900">WhatsApp Business API Integration</h4>
                           <p className="text-green-800 text-sm mt-1">
                             Messages are sent through certified Business Solution Providers in compliance with 
-                            GDPR and WhatsApp's Business Terms. Only pre-approved educational content is sent.
+                            GDPR and WhatsApp&apos;s Business Terms. Only pre-approved educational content is sent.
                           </p>
                         </div>
                       </div>
@@ -261,7 +261,7 @@ export default function ConsentModal({
                           </div>
                           <p className="text-sm text-orange-800 mt-1">
                             I confirm that I have obtained proper consent from parents/guardians to send 
-                            their children's academic information and school updates via WhatsApp.
+                            their children&apos;s academic information and school updates via WhatsApp.
                           </p>
                         </div>
                       </label>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Shield, AlertTriangle, ArrowLeft, MessageCircle } from 'lucide-react';
+import ConsentButton from "@/components/legal/ConsentButton";
 
 export const metadata: Metadata = {
   title: "Consent Required | CBCTrack",
@@ -37,7 +38,7 @@ export default function ConsentRequiredPage() {
                 <h3 className="text-sm font-medium text-gray-900">Why We Need Your Consent</h3>
                 <p className="text-sm text-gray-600 mt-1">
                   CBCTrack processes student data and educational information to provide school management services. 
-                  Under Kenya's Data Protection Act and GDPR, we need your explicit consent.
+                  Under Kenya&apos;s Data Protection Act and GDPR, we need your explicit consent.
                 </p>
               </div>
             </div>
@@ -48,7 +49,7 @@ export default function ConsentRequiredPage() {
                 <h3 className="text-sm font-medium text-gray-900">WhatsApp Communications</h3>
                 <p className="text-sm text-gray-600 mt-1">
                   Our WhatsApp Business API integration requires explicit consent to send academic reports 
-                  and school updates to parents in compliance with Meta's Business Terms.
+                  and school updates to parents in compliance with Meta&apos;s Business Terms.
                 </p>
               </div>
             </div>
@@ -95,12 +96,7 @@ export default function ConsentRequiredPage() {
 
           <div className="pt-4 border-t border-gray-200">
             <div className="flex flex-col space-y-3">
-              <button
-                onClick={() => window.location.reload()}
-                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 transition-colors"
-              >
-                Review and Give Consent
-              </button>
+              <ConsentButton />
               
               <div className="flex items-center justify-center space-x-4 text-sm">
                 <Link 
