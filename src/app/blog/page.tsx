@@ -4,7 +4,7 @@ import { BlogPageClient } from "@/components/blog/BlogPageClient";
 import { FeaturedPosts } from "@/components/blog/FeaturedPosts";
 import { BlogCategories } from "@/components/blog/BlogCategories";
 import { BlogBreadcrumbs } from "@/components/blog/BlogBreadcrumbs";
-import { getAllPosts } from '@/lib/blog-server';
+import { getAllPosts } from '@/lib/blog-api';
 import { BlogPost } from '@/lib/blog-types';
 import { Eye, BookOpen, Users, TrendingUp } from 'lucide-react';
 
@@ -43,6 +43,7 @@ export const metadata: Metadata = {
 export default async function BlogPage() {
   let initialPosts: BlogPost[] = [];
   let blogStats = null;
+  let featuredPosts: BlogPost[] = [];
   
   try {
     const posts = await getAllPosts();
@@ -55,6 +56,8 @@ export default async function BlogPage() {
       totalAuthors: 3,
       avgReadingTime: Math.round(publishedPosts.reduce((sum, post) => sum + (post.readingTime || 5), 0) / publishedPosts.length)
     };
+
+    featuredPosts = posts.filter(post => post.featured === true)
   } catch (error) {
     console.error('Error loading blog data:', error);
   }
@@ -130,11 +133,11 @@ export default async function BlogPage() {
           />
         </div>
 
-        {initialPosts.length > 0 && (
+        {featuredPosts.length > 0 && (
           <div className="mb-16">
             <Suspense fallback={<div className="animate-pulse h-64 bg-gray-200 rounded-lg"></div>}>
               <FeaturedPosts 
-                posts={initialPosts}
+                posts={featuredPosts}
                 variant="grid"
                 maxPosts={6}
               />
@@ -153,7 +156,7 @@ export default async function BlogPage() {
             ))}
           </div>
         }>
-          <BlogPageClient />
+          <BlogPageClient posts={initialPosts} />
         </Suspense>
       </div>
     </div>

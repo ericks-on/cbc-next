@@ -18,6 +18,18 @@ export const BLOG_CATEGORIES: Record<BlogCategory, BlogCategoryConfig> = {
     path: '/blog/cbc-insights',
     featured: true,
     sortOrder: 1
+  },  'education': {
+    id: 'education',
+    name: 'Education',
+    description: 'General educational topics, teaching methodologies, and learning strategies',
+    icon: '🎓',
+    color: '#dc2626',
+    bgColor: '#fef2f2',
+    borderColor: '#fecaca',
+    textColor: '#b91c1c',
+    path: '/blog/education',
+    featured: true,
+    sortOrder: 5
   },
   'school-management': {
     id: 'school-management',

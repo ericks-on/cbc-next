@@ -1,6 +1,6 @@
 // Blog type definitions for CBCTrack
 
-export type BlogCategory = 'cbc-insights' | 'school-management' | 'assessment-guides' | 'technology-tips';
+export type BlogCategory = 'cbc-insights' | 'school-management' | 'assessment-guides' | 'technology-tips' |'education'| 'business';
 
 export interface BlogCategoryConfig {
   id: BlogCategory;
@@ -42,6 +42,7 @@ export interface BlogPost {
   updatedAt: string;
   status: 'draft' | 'published' | 'archived';
   featured: boolean;
+  pinned?: boolean;
   readingTime?: number;
   seo?: {
     metaTitle?: string;
@@ -56,6 +57,38 @@ export interface BlogPost {
   };
 }
 
+export interface BlogMeta {
+  totalPosts: number;
+  totalPages: number;
+  currentPage: number;
+  postsPerPage: number;
+  categories: {
+    [key in BlogCategory]: number;
+  };
+  tags: {
+    name: string;
+    count: number;
+  }[];
+}
+
+export interface SearchResult {
+  posts: BlogPost[];
+  total: number;
+  query: string;
+  suggestions?: string[];
+}
+
+export interface CategoryPageData {
+  category: BlogCategory;
+  posts: BlogPost[];
+  meta: BlogMeta;
+}
+
+export interface TagPageData {
+  tag: string;
+  posts: BlogPost[];
+  meta: BlogMeta;
+}
 export interface BlogStats {
   totalPosts: number;
   totalCategories: number;

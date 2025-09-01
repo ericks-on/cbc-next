@@ -11,10 +11,12 @@ interface FeaturedPostsProps {
   posts: BlogPost[];
   variant?: 'grid' | 'list';
   maxPosts?: number;
+  featured?: boolean;
 }
 
 export function FeaturedPosts({ 
-  posts, 
+  posts,
+  featured = true,
   variant = 'grid', 
   maxPosts = 6 
 }: FeaturedPostsProps) {
@@ -30,10 +32,11 @@ export function FeaturedPosts({
 
   return (
     <div className="space-y-8">
+      {featured && 
       <div className="text-center">
         <h2 className="text-2xl font-bold text-gray-900 mb-2">Featured Articles</h2>
         <p className="text-gray-600">Latest insights on CBC implementation and school management</p>
-      </div>
+      </div> }
 
       <div className={`grid gap-8 ${variant === 'grid' ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' : 'grid-cols-1'}`}>
         {displayPosts.map((post) => {
