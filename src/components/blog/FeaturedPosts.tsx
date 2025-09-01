@@ -1,10 +1,10 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { BlogPost } from '@/lib/blog-types';
-import { getCategoryConfig, getAuthor, formatDate } from '@/lib/blog';
+import { getCategoryConfig, formatDate } from '@/lib/blog';
 import { Clock, User } from 'lucide-react';
 
 interface FeaturedPostsProps {
@@ -14,15 +14,27 @@ interface FeaturedPostsProps {
   featured?: boolean;
 }
 
-export function FeaturedPosts({ 
+export function FeaturedPosts({
   posts,
   featured = true,
-  variant = 'grid', 
-  maxPosts = 6 
+  variant = 'grid',
+  maxPosts = 6,
 }: FeaturedPostsProps) {
-  const displayPosts = posts.slice(0, maxPosts);
+  const [currentPage, setCurrentPage] = useState(1);
+  const totalPages = Math.ceil(posts.length / maxPosts);
+  const startIndex = (currentPage - 1) * maxPosts;
+  const endIndex = startIndex + maxPosts;
+  const displayPosts = posts.slice(startIndex, endIndex);
 
-  if (displayPosts.length === 0) {
+  const handleNextPage = () => {
+    setCurrentPage((prevPage) => prevPage + 1);
+  };
+
+  const handlePrevPage = () => {
+    setCurrentPage((prevPage) => prevPage - 1);
+  };
+
+  if (posts.length === 0) {
     return (
       <div className="text-center py-12">
         <p className="text-gray-600">No featured posts available.</p>
@@ -32,17 +44,18 @@ export function FeaturedPosts({
 
   return (
     <div className="space-y-8">
-      {featured && 
-      <div className="text-center">
-        <h2 className="text-2xl font-bold text-gray-900 mb-2">Featured Articles</h2>
-        <p className="text-gray-600">Latest insights on CBC implementation and school management</p>
-      </div> }
+      {featured && (
+        <div className="text-center">
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">Featured Articles</h2>
+          <p className="text-gray-600">Latest insights on CBC implementation and school management</p>
+        </div>
+      )}
 
       <div className={`grid gap-8 ${variant === 'grid' ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' : 'grid-cols-1'}`}>
         {displayPosts.map((post) => {
           const category = getCategoryConfig(post.category);
-          const author = getAuthor(post.author);
-          
+          const author = post.author;
+
           return (
             <article
               key={post.id}
@@ -96,7 +109,7 @@ export function FeaturedPosts({
                     {author && (
                       <div className="flex items-center gap-1">
                         <User className="w-4 h-4" />
-                        <span>{author.name}</span>
+                        <span>{typeof author === 'string'? author : author?.name}</span>
                       </div>
                     )}
                     <div className="flex items-center gap-1">
@@ -123,6 +136,34 @@ export function FeaturedPosts({
           );
         })}
       </div>
+
+      {posts.length > maxPosts && (
+        <div className="flex justify-center items-center gap-4 mt-8">
+          <button
+            onClick={handlePrevPage}
+            disabled={currentPage === 1}
+            className={`px-4 py-2 rounded-lg font-medium transition-colors ${
+              currentPage === 1 
+                ? 'bg-gray-200 text-gray-500 cursor-not-allowed'
+                : 'bg-emerald-600 text-white hover:bg-emerald-700'
+            }`}
+          >
+            Previous
+          </button>
+          <span className="text-gray-700">Page {currentPage} of {totalPages}</span>
+          <button
+            onClick={handleNextPage}
+            disabled={currentPage === totalPages}
+            className={`px-4 py-2 rounded-lg font-medium transition-colors ${
+              currentPage === totalPages 
+                ? 'bg-gray-200 text-gray-500 cursor-not-allowed'
+                : 'bg-emerald-600 text-white hover:bg-emerald-700'
+            }`}
+          >
+            Next
+          </button>
+        </div>
+      )}
     </div>
   );
 }

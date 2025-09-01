@@ -9,7 +9,7 @@ import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import { visit } from 'unist-util-visit';
 import { toString } from 'hast-util-to-string';
-import type { Root as MdastRoot } from 'mdast';
+import type { Heading, Root as MdastRoot, Root } from 'mdast';
 import type { Element, Root as HastRoot } from 'hast';
 
 export interface TOCItem {
@@ -28,7 +28,7 @@ export interface MarkdownResult {
 
 // Generate unique ID for headings
 function generateId(text: string, existingIds: Set<string>): string {
-  let baseId = text
+  const baseId = text
     .toLowerCase()
     .replace(/[^\w\s-]/g, '')
     .replace(/\s+/g, '-')
@@ -49,9 +49,22 @@ function generateId(text: string, existingIds: Set<string>): string {
 
 // Extract table of contents
 function remarkToc(toc: TOCItem[], existingIds: Set<string>) {
-  return (tree: MdastRoot) => {
-    visit(tree, 'heading', (node) => {
-      const text = toString(node);
+  return (tree: Root) => {
+    visit(tree, 'heading', (node: Heading) => {
+      // Extract text content from heading children
+      let text = '';
+      if (node.children && node.children.length > 0) {
+        text = node.children
+          .map(child => {
+            if ('value' in child) {
+              return child.value;
+            }
+            return '';
+          })
+          .join('')
+          .trim();
+      }
+      
       const id = generateId(text, existingIds);
       
       // Add id to heading

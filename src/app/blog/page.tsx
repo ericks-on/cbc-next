@@ -47,7 +47,7 @@ export default async function BlogPage() {
   
   try {
     const posts = await getAllPosts();
-    initialPosts = posts.filter(post => post.status === 'published').slice(0, 6);
+    initialPosts = posts.filter(post => post.status === 'published');
     
     const publishedPosts = posts.filter(post => post.status === 'published');
     blogStats = {

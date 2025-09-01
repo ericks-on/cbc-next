@@ -18,18 +18,6 @@ export const BLOG_CATEGORIES: Record<BlogCategory, BlogCategoryConfig> = {
     path: '/blog/cbc-insights',
     featured: true,
     sortOrder: 1
-  },  'education': {
-    id: 'education',
-    name: 'Education',
-    description: 'General educational topics, teaching methodologies, and learning strategies',
-    icon: '🎓',
-    color: '#dc2626',
-    bgColor: '#fef2f2',
-    borderColor: '#fecaca',
-    textColor: '#b91c1c',
-    path: '/blog/education',
-    featured: true,
-    sortOrder: 5
   },
   'school-management': {
     id: 'school-management',
@@ -69,6 +57,32 @@ export const BLOG_CATEGORIES: Record<BlogCategory, BlogCategoryConfig> = {
     path: '/blog/technology-tips',
     featured: true,
     sortOrder: 4
+  },
+  'education': {
+    id: 'education',
+    name: 'Education',
+    description: 'General educational topics, teaching methodologies, and learning strategies',
+    icon: '🎓',
+    color: '#dc2626',
+    bgColor: '#fef2f2',
+    borderColor: '#fecaca',
+    textColor: '#b91c1c',
+    path: '/blog/education',
+    featured: true,
+    sortOrder: 5
+  },
+  'business': {
+    id: 'business',
+    name: 'Business',
+    description: 'Business strategies, entrepreneurship, and management insights for educational institutions',
+    icon: '💼',
+    color: '#7e22ce',
+    bgColor: '#faf5ff',
+    borderColor: '#d8b4fe',
+    textColor: '#7c3aed',
+    path: '/blog/business',
+    featured: true,
+    sortOrder: 6
   }
 };
 
@@ -80,8 +94,6 @@ export const BLOG_AUTHORS: Record<string, BlogAuthor> = {
     role: 'CBC Education Specialist',
     bio: 'Former primary school teacher with 12+ years experience in CBC implementation and teacher training across Kenya.',
     avatar: '/images/team/sarah-mwangi.jpg',
-    email: 'sarah@cbctrack.com',
-    linkedin: 'https://linkedin.com/in/sarahmwangi',
     expertise: ['CBC Implementation', 'Teacher Training', 'Curriculum Design', 'Educational Assessment']
   },
   'john-kiprotich': {
@@ -90,8 +102,6 @@ export const BLOG_AUTHORS: Record<string, BlogAuthor> = {
     role: 'School Administration Expert',
     bio: 'Former head teacher and education administrator with expertise in school management systems and administrative efficiency.',
     avatar: '/images/team/john-kiprotich.jpg',
-    email: 'john@cbctrack.com',
-    linkedin: 'https://linkedin.com/in/johnkiprotich',
     expertise: ['School Administration', 'Leadership', 'Financial Management', 'Parent Communication']
   },
   'mary-wanjiku': {
@@ -100,8 +110,6 @@ export const BLOG_AUTHORS: Record<string, BlogAuthor> = {
     role: 'Educational Technology Specialist',
     bio: 'Technology integration specialist with focus on educational software and digital transformation in schools.',
     avatar: '/images/team/mary-wanjiku.jpg',
-    email: 'mary@cbctrack.com',
-    linkedin: 'https://linkedin.com/in/marywanjiku',
     expertise: ['Educational Technology', 'Digital Integration', 'Software Training', 'Data Analytics']
   }
 };

@@ -16,9 +16,8 @@ export function BlogPageClient(props: {posts: BlogPost[]}) {
       </div>
       
       <FeaturedPosts 
-        posts={posts} 
-        variant="grid" 
-        maxPosts={12} 
+        posts={posts}
+        variant="grid"
         featured={false}
       />
     </div>

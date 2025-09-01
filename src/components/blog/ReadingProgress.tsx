@@ -8,7 +8,7 @@ export function ReadingProgress() {
   useEffect(() => {
     const updateProgress = () => {
       const article = document.querySelector('article.blog-post');
-      if (!article) return;
+      if (!article || !(article instanceof HTMLElement)) return;
 
       const articleTop = article.offsetTop;
       const articleHeight = article.offsetHeight;

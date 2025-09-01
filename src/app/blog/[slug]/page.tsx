@@ -15,7 +15,7 @@ import {
   Clock
 } from 'lucide-react';
 import { getCategoryConfig, formatDate } from '@/lib/blog-utils';
-import { parseMarkdown } from '@/lib/markdown-parser';
+import { parseMarkdown } from '@/lib/enhanced-markdown-parser';
 import { getPostBySlug, getRelatedPosts } from "@/lib/blog-api";
 import { BlogBreadcrumbs } from '@/components/blog/BlogBreadcrumbs';
 import { RelatedPosts } from '@/components/blog/RelatedPosts';

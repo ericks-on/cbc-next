@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next'
-import { getAllPosts } from '@/lib/blog-server'
+import { getAllPosts } from '@/lib/blog-api'
 import { BLOG_CATEGORIES } from '@/lib/blog'
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://cbctrack.com'
