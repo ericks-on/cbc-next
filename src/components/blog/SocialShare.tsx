@@ -134,7 +134,7 @@ export function SocialShare({ post, variant = 'default' }: SocialShareProps) {
         </button>
       </div>
       
-      {typeof navigator !== 'undefined' && navigator.share && (
+      {typeof navigator !== 'undefined' &&  typeof navigator.share === 'function' && (
         <button
           onClick={() => handleShare('native')}
           className="w-full mt-3 p-3 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-colors duration-200"

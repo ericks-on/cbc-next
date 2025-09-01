@@ -19,14 +19,13 @@ export interface BlogCategoryConfig {
 export interface BlogAuthor {
   id: string;
   name: string;
-  role: string;
-  bio: string;
-  avatar: string;
-  email: string;
-  linkedin?: string;
-  twitter?: string;
-  expertise: string[];
+  role?: string;
+  bio?: string;
+  avatar?: string;
+  expertise?: string[];
 }
+
+export type Author = string | BlogAuthor;
 
 export interface BlogPost {
   id: string;
@@ -34,7 +33,7 @@ export interface BlogPost {
   slug: string;
   excerpt: string;
   content: string;
-  author: string;
+  author: Author;
   category: BlogCategory;
   tags: string[];
   publishedAt: string;

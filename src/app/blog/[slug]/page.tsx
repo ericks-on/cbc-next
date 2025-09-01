@@ -23,6 +23,7 @@ import { SocialShare } from '@/components/blog/SocialShare';
 import { ReadingProgress } from '@/components/blog/ReadingProgress';
 import { BlogContent } from '@/components/blog/BlogContent';
 import { SkeletonLoader } from "@/components/ui/SkeletonLoader";
+import { Author } from "@/lib/blog-types";
 
 interface BlogPostPageProps {
   params: Promise<{
@@ -57,7 +58,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
     title: post.title,
     description: post.excerpt,
     keywords: post.tags?.join(', '),
-    authors: [{ name: post.author }],
+    authors: typeof post.author === 'string'? [{ name: post.author }] : [{ name: post.author?.name }],
     category: config.name,
     openGraph: {
       title: post.title,
@@ -74,7 +75,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       ] : [],
       publishedTime: post.publishedAt,
       modifiedTime: post.updatedAt || post.publishedAt,
-      authors: [ post.author],
+      authors: typeof post.author === 'string'? [post.author]: [ post.author?.name],
       tags: post.tags,
       section: config.name
     },
@@ -97,7 +98,7 @@ const AuthorInfo = ({
   updatedAt,
   readingTime 
 }: { 
-  author: any; 
+  author: Author; 
   publishedAt: string; 
   updatedAt?: string;
   readingTime?: number;
@@ -196,7 +197,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             "dateModified": post.updatedAt || post.publishedAt,
             "author": {
               "@type": "Person",
-              "name": typeof post.author === 'string' ? post.author : post.author
+              "name": typeof post.author === 'object' ? post.author?.name : post.author
             },
             "publisher": {
               "@type": "Organization",
@@ -277,7 +278,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               <div className="flex flex-wrap items-center gap-6 text-sm text-gray-600 mb-8">
                 <div className="flex items-center gap-1">
                   <User className="w-4 h-4" />
-                  <span>By {typeof post.author === 'string' ? post.author : post.author}</span>
+                  <span>By {typeof post.author === 'string' ? post.author : post.author?.name}</span>
                 </div>
                 
                 <div className="flex items-center gap-1">
